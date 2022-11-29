@@ -3,9 +3,9 @@ from selenium.webdriver.common.by import By
 class Login:
     """PAGEOBJECTIVES"""
 
-    USERNAME_TXT_XPATH="XXXXXXXXXX"
-    PASSWORD_TXT_XPATH="XXXXXXXXXX"
-    LOGIN_BTN_XPATH="XXXXXXXXXX"
+    USERNAME_TXT_XPATH="XXXXXXXXXX" #Add Username xpath here
+    PASSWORD_TXT_XPATH="XXXXXXXXXX" #Add Password xpath here
+    LOGIN_BTN_XPATH="XXXXXXXXXX" #Add Login button xpath here
     
 
 

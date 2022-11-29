@@ -1,4 +1,4 @@
-#  pytest -v -s --html=Reports/test_Login.html --self-contained-html TESTCASES/test_Login.py --browser Chrome
+#  pytest -v -s --html=REPORTS/test_Login.html --self-contained-html TESTCASES/test_Login.py --browser Chrome
 #  pytest -v -s TESTCASES/test_Login.py --browser Firefox
 #  pytest -v -s TESTCASES/test_Login.py --browser Chrome
 
