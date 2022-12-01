@@ -1,4 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -7,7 +11,7 @@ import pytest
 @pytest.fixture()
 def setup(browser):
     if browser=='Chrome':
-        driver = webdriver.Chrome(executable_path="RESOURCES/chromedriver")
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
         #driver.execute_script("document.body.style.zoom='80%'")
         #driver.find_element(By.TAG_NAME, value='html').send_keys(Keys.CONTROL, '-')
@@ -21,7 +25,7 @@ def setup(browser):
 
 
     elif browser=='Firefox':
-        driver = webdriver.Firefox(executable_path="RESOURCES/chromedriver")
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
         driver.implicitly_wait(60)
         driver.set_window_position(0, 1)
         print("Launching Firefoxbrowser")
